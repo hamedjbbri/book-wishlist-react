@@ -1,11 +1,26 @@
-import React from 'react'
+import React from 'react';
 
 
 
-function BookShow({ book }) {
+function BookShow({ book, onDelete }) {
+
+  const handleClick = () => {
+    onDelete(book.id);
+    console.log(book.id)
+  };
+
+
   return (
-    <div className='book-show'>{book.title}</div>
-  )
+    <div className='book-show'>
+        {book.title}
+        <div className='actions'>
+          <button className='delete' onClick={handleClick}>
+               Delete
+          </button>
+
+        </div>
+      </div>
+  );
 }
 
 export default BookShow
