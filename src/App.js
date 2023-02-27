@@ -8,11 +8,9 @@ function App() {
  const [books, setBooks] = useState([]) 
 
  const deleteBookById = (id) => {
-       const updatedBooks = books.filter((book) => {
-           return book.id !== id;
-       });
+       const updatedBooks = books.filter((book) => book.id !== id);
 
-       setBooks(updatedBooks);
+      setBooks(updatedBooks);
  };
 
  const createBook = (title) => {
